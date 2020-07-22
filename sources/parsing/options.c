@@ -6,7 +6,7 @@
 /*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 18:12:23 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/22 18:19:36 by emedea           ###   ########.fr       */
+/*   Updated: 2020/07/22 20:11:57 by emedea           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,18 @@ static t_options    init_options()
     return (options);
 }
 
-void                parse_options(int argc, char **argv)
+t_options           parse_options(int argc, char **argv)
 {
     t_options       options;
 
     options = init_options();
+
+    while (argv++)
+    {
+
+    }
+
+    return (options);
 }
 
 

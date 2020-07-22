@@ -1,26 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   options.h                                          :+:      :+:    :+:   */
+/*   options.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/21 13:47:12 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/22 18:18:25 by emedea           ###   ########.fr       */
+/*   Created: 2020/07/22 18:12:23 by emedea            #+#    #+#             */
+/*   Updated: 2020/07/22 18:19:36 by emedea           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OPTIONS_H
-# define OPTIONS_H
+#include "includes/corewar.h"
 
-# define O_NUMBER_DEFAULT   0
-# define O_LOG_DEFAULT      0
+static t_options    init_options()
+{
+    t_options       options;
 
-# include "types.h"
+    options.number = O_NUMBER_DEFAULT;
+    options.log = O_LOG_DEFAULT;
 
-typedef struct              s_options {
-    t_bool                  number;
-    t_bool                  log;
-}                           t_options;
+    return (options);
+}
 
-#endif
+void                parse_options(int argc, char **argv)
+{
+    t_options       options;
+
+    options = init_options();
+}
+
+
+

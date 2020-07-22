@@ -4,7 +4,7 @@
 #@    https://github.com/kagestonedragon/auto_make    @#
 ########################################################
 
-NAME = auto_make
+NAME = corewar
 
 GCC = gcc
 

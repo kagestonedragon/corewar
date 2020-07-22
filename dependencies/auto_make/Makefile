@@ -15,17 +15,20 @@ OBJ_PATH = objects/
 INCLUDES_INCLUDE = includes/
 
 SOURCES_PATH = sources/
-SOURCES_PARSING_PATH = sources/parsing/
 
 SOURCES_FILES = \
-		main.c 
-SOURCES_PARSING_FILES = \
-		options.c 
+		create_makefile.c \
+		errors.c \
+		get_variables.c \
+		information.c \
+		main.c \
+		parsing.c \
+		parsing_directories.c \
+		parsing_files.c 
 
 OBJ_SOURCES_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_FILES:.c=.o))
-OBJ_SOURCES_PARSING_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_PARSING_FILES:.c=.o))
 
-OBJECTS = $(OBJ_SOURCES_CORE) $(OBJ_SOURCES_PARSING_CORE) 
+OBJECTS = $(OBJ_SOURCES_CORE) 
 
 all: $(NAME)
 
@@ -47,9 +50,5 @@ objects:
 		@(mkdir $(OBJ_PATH))
 
 objects/%.o: $(SOURCES_PATH)%.c | objects
-		@($(GCC) $(GCC_FLAGS) -I $(INCLUDES_INCLUDE) -c $< -o $@)
-		@(echo "[0;93m"$< "->" $@"[0;0m")
-
-objects/%.o: $(SOURCES_PARSING_PATH)%.c | objects
 		@($(GCC) $(GCC_FLAGS) -I $(INCLUDES_INCLUDE) -c $< -o $@)
 		@(echo "[0;93m"$< "->" $@"[0;0m")

@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   options.h                                          :+:      :+:    :+:   */
+/*   p_strlen.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
+/*   By: rhulk <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/21 13:47:12 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/21 14:25:03 by emedea           ###   ########.fr       */
+/*   Created: 2019/08/29 14:17:41 by rhulk             #+#    #+#             */
+/*   Updated: 2019/08/29 14:18:15 by rhulk            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OPTIONS_H
-# define OPTIONS_H
+int			p_strlen(const char *source)
+{
+	int		size;
 
-# include "types.h"
-
-typedef struct      s_options {
-    t_bool
-}                   t_options;
-
-#endif
+	size = 0;
+	while (source[size])
+		size++;
+	return (size);
+}

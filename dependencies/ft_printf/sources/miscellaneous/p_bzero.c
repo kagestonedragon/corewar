@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   options.h                                          :+:      :+:    :+:   */
+/*   p_bzero.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
+/*   By: rhulk <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/21 13:47:12 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/21 14:25:03 by emedea           ###   ########.fr       */
+/*   Created: 2019/08/29 14:18:52 by rhulk             #+#    #+#             */
+/*   Updated: 2019/08/29 14:19:01 by rhulk            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OPTIONS_H
-# define OPTIONS_H
-
-# include "types.h"
-
-typedef struct      s_options {
-    t_bool
-}                   t_options;
-
-#endif
+void	p_bzero(char *str, int n)
+{
+	if (!str)
+		return ;
+	while (n--)
+		str[n] = '\0';
+}

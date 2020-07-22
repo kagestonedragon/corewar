@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   options.h                                          :+:      :+:    :+:   */
+/*   type_parsing.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
+/*   By: rhulk <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/21 13:47:12 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/21 14:25:03 by emedea           ###   ########.fr       */
+/*   Created: 2019/08/29 13:50:42 by rhulk             #+#    #+#             */
+/*   Updated: 2019/08/29 17:24:14 by emedea           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OPTIONS_H
-# define OPTIONS_H
+#include "ft_printf.h"
 
-# include "types.h"
-
-typedef struct      s_options {
-    t_bool
-}                   t_options;
-
-#endif
+int		type_parsing(t_printf *p, const char *format, int *i)
+{
+	p->type = format[*i];
+	return (0);
+}

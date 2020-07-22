@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   options.h                                          :+:      :+:    :+:   */
+/*   p_atoi.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
+/*   By: rhulk <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/21 13:47:12 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/21 14:25:03 by emedea           ###   ########.fr       */
+/*   Created: 2019/08/29 14:19:15 by rhulk             #+#    #+#             */
+/*   Updated: 2019/08/29 14:19:47 by rhulk            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef OPTIONS_H
-# define OPTIONS_H
+int			p_atoi(const char *str, int *i)
+{
+	int		result;
 
-# include "types.h"
-
-typedef struct      s_options {
-    t_bool
-}                   t_options;
-
-#endif
+	result = 0;
+	while (str[*i] && (str[*i] >= '0' && str[*i] <= '9'))
+	{
+		result = (result * 10) + (str[*i] - '0');
+		*i += 1;
+	}
+	return (result);
+}

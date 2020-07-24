@@ -27,31 +27,23 @@ OBJ_SOURCES_PARSING_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_PARSING_FILES:.c=.
 OBJECTS = $(SOURCES) $(SOURCES_PARSING) 
 
 all: $(NAME)
-		make -C dependencies/libft
-		make -C dependencies/ft_printf
 
 $(NAME): $(OBJECTS)
-		@($(GCC) $(GCC_FLAGS) -o $(NAME) $(OBJECTS) -L dependencies/libft/ -lft dependencies/ft_printf/ -lftprintf)
+		make -C dependencies/libft
+		@($(GCC) $(GCC_FLAGS) -o $(NAME) $(OBJECTS) -L dependencies/libft/ -lft)
 		@(echo "^[[0;92m"$(NAME) "was created!^[[0;0m")
+
 clean:
 		make clean -C dependencies/libft
-		make clean -C dependencies/ft_printf
 		@(/bin/rm -rf $(OBJ_PATH))
 		@(echo "^[[0;91mAll object files have been deleted!^[[0;0m")
 
 fclean:
 		make fclean -C dependencies/libft
-		make fclean -C dependencies/ft_printf
 		@(/bin/rm -f $(NAME))
 		@(echo "^[[0;91m"$(NAME) "has been deleted!^[[0;0m")
 
-re:
-		make fclean -C dependencies/libft
-		make fclean -C dependencies/ft_printf
-		make -C dependencies/libft
-		make -C dependencies/ft_printf
-		fclean
-		all
+re: fclean all
 
 objects:
 		@(mkdir $(OBJ_PATH))

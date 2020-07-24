@@ -6,7 +6,7 @@
 /*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 14:00:17 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/23 22:09:02 by emedea           ###   ########.fr       */
+/*   Updated: 2020/07/24 22:37:26 by emedea           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,6 @@ int                 main(int argc, char **argv)
     
     corewar = init_corewar(argc, argv);
     corewar = NULL;
+    
     return (0);
 }

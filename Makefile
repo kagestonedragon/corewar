@@ -24,7 +24,7 @@ SOURCES_PARSING_FILES = \
 OBJ_SOURCES_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_FILES:.c=.o))
 OBJ_SOURCES_PARSING_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_PARSING_FILES:.c=.o))
 
-OBJECTS = $(SOURCES) $(SOURCES_PARSING) 
+OBJECTS = $(OBJ_SOURCES_CORE) $(OBJ_SOURCES_PARSING_CORE) 
 
 all: $(NAME)
 
@@ -38,7 +38,7 @@ clean:
 		@(/bin/rm -rf $(OBJ_PATH))
 		@(echo "^[[0;91mAll object files have been deleted!^[[0;0m")
 
-fclean:
+fclean: clean
 		make fclean -C dependencies/libft
 		@(/bin/rm -f $(NAME))
 		@(echo "^[[0;91m"$(NAME) "has been deleted!^[[0;0m")
@@ -48,11 +48,11 @@ re: fclean all
 objects:
 		@(mkdir $(OBJ_PATH))
 
-objects/%.o: $(SOURCES)%.c | objects
+objects/%.o: $(SOURCES_PATH)%.c | objects
 		@($(GCC) $(GCC_FLAGS) -I $(INCLUDE_INCLUDES) -c $< -o $@)
 		(echo "^[[0;93m"$< "->" $@"^[[0;0m")
 
-objects/%.o: $(SOURCES_PARSING)%.c | objects
+objects/%.o: $(SOURCES_PARSING_PATH)%.c | objects
 		@($(GCC) $(GCC_FLAGS) -I $(INCLUDE_INCLUDES) -c $< -o $@)
 		(echo "^[[0;93m"$< "->" $@"^[[0;0m")
 

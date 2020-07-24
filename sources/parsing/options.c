@@ -6,11 +6,11 @@
 /*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/22 18:12:23 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/22 20:11:57 by emedea           ###   ########.fr       */
+/*   Updated: 2020/07/23 22:09:29 by emedea           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/corewar.h"
+#include "corewar.h"
 
 static t_options    init_options()
 {

@@ -2,7 +2,7 @@ NAME = libftprintf.a
 
 GCC = gcc
 
-GCC_FLAGS = -Wall -Wextra -Werror
+GCC_FLAGS = 
 
 AR = ar
 AR_FLAGS = rcs

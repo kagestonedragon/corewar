@@ -1,1 +1,1 @@
-./dependencies/auto_make/auto_make corewar -S sources -I includes
+php dependencies/auto_make/AutoMake.php --N corewar --FLAGS "-Wall -Wextra -Werror" --S sources --I includes --D dependencies/libft/ dependencies/ft_printf/ --L "dependencies/libft/ -lft dependencies/ft_printf/ -lftprintf"

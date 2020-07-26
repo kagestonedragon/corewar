@@ -16,22 +16,43 @@ INCLUDE_INCLUDES = includes/
 
 SOURCES_PATH = sources/
 SOURCES_MISCELLANEOUS_PATH = sources/miscellaneous/
+SOURCES_MISCELLANEOUS_IDENTIFICATION_PATH = sources/miscellaneous/identification/
+SOURCES_MISCELLANEOUS_CONVERTING_PATH = sources/miscellaneous/converting/
+SOURCES_MISCELLANEOUS_DEBUG_PATH = sources/miscellaneous/debug/
+SOURCES_MISCELLANEOUS_ERROR_MANAGEMENT_PATH = sources/miscellaneous/error_management/
 SOURCES_PARSING_PATH = sources/parsing/
+SOURCES_PARSING_CHAMPIONS_PATH = sources/parsing/champions/
 SOURCES_FILES = \
 			main.c
-SOURCES_MISCELLANEOUS_FILES = \
-			ft_is_cor_file.c\
-			ft_is_integer.c
+SOURCES_MISCELLANEOUS_IDENTIFICATION_FILES = \
+			is_cor_file.c\
+			is_integer.c
+SOURCES_MISCELLANEOUS_CONVERTING_FILES = \
+			bytecode_to_int32.c
+SOURCES_MISCELLANEOUS_DEBUG_FILES = \
+			debug_options.c\
+			debug_champions.c
+SOURCES_MISCELLANEOUS_ERROR_MANAGEMENT_FILES = \
+			print_help.c\
+			terminate.c
 SOURCES_PARSING_FILES = \
+			initialization.c\
 			flags.c\
-			champion.c\
 			options.c
+SOURCES_PARSING_CHAMPIONS_FILES = \
+			read_binary.c\
+			champion.c
 
 OBJ_SOURCES_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_FILES:.c=.o))
 OBJ_SOURCES_MISCELLANEOUS_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_MISCELLANEOUS_FILES:.c=.o))
+OBJ_SOURCES_MISCELLANEOUS_IDENTIFICATION_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_MISCELLANEOUS_IDENTIFICATION_FILES:.c=.o))
+OBJ_SOURCES_MISCELLANEOUS_CONVERTING_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_MISCELLANEOUS_CONVERTING_FILES:.c=.o))
+OBJ_SOURCES_MISCELLANEOUS_DEBUG_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_MISCELLANEOUS_DEBUG_FILES:.c=.o))
+OBJ_SOURCES_MISCELLANEOUS_ERROR_MANAGEMENT_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_MISCELLANEOUS_ERROR_MANAGEMENT_FILES:.c=.o))
 OBJ_SOURCES_PARSING_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_PARSING_FILES:.c=.o))
+OBJ_SOURCES_PARSING_CHAMPIONS_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_PARSING_CHAMPIONS_FILES:.c=.o))
 
-OBJECTS = $(OBJ_SOURCES_CORE) $(OBJ_SOURCES_MISCELLANEOUS_CORE) $(OBJ_SOURCES_PARSING_CORE) 
+OBJECTS = $(OBJ_SOURCES_CORE) $(OBJ_SOURCES_MISCELLANEOUS_CORE) $(OBJ_SOURCES_MISCELLANEOUS_IDENTIFICATION_CORE) $(OBJ_SOURCES_MISCELLANEOUS_CONVERTING_CORE) $(OBJ_SOURCES_MISCELLANEOUS_DEBUG_CORE) $(OBJ_SOURCES_MISCELLANEOUS_ERROR_MANAGEMENT_CORE) $(OBJ_SOURCES_PARSING_CORE) $(OBJ_SOURCES_PARSING_CHAMPIONS_CORE) 
 
 all: $(NAME)
 
@@ -63,7 +84,27 @@ objects/%.o: $(SOURCES_MISCELLANEOUS_PATH)%.c | objects
 		@($(GCC) $(GCC_FLAGS) -I $(INCLUDE_INCLUDES) -c $< -o $@)
 		(echo "^[[0;93m"$< "->" $@"^[[0;0m")
 
+objects/%.o: $(SOURCES_MISCELLANEOUS_IDENTIFICATION_PATH)%.c | objects
+		@($(GCC) $(GCC_FLAGS) -I $(INCLUDE_INCLUDES) -c $< -o $@)
+		(echo "^[[0;93m"$< "->" $@"^[[0;0m")
+
+objects/%.o: $(SOURCES_MISCELLANEOUS_CONVERTING_PATH)%.c | objects
+		@($(GCC) $(GCC_FLAGS) -I $(INCLUDE_INCLUDES) -c $< -o $@)
+		(echo "^[[0;93m"$< "->" $@"^[[0;0m")
+
+objects/%.o: $(SOURCES_MISCELLANEOUS_DEBUG_PATH)%.c | objects
+		@($(GCC) $(GCC_FLAGS) -I $(INCLUDE_INCLUDES) -c $< -o $@)
+		(echo "^[[0;93m"$< "->" $@"^[[0;0m")
+
+objects/%.o: $(SOURCES_MISCELLANEOUS_ERROR_MANAGEMENT_PATH)%.c | objects
+		@($(GCC) $(GCC_FLAGS) -I $(INCLUDE_INCLUDES) -c $< -o $@)
+		(echo "^[[0;93m"$< "->" $@"^[[0;0m")
+
 objects/%.o: $(SOURCES_PARSING_PATH)%.c | objects
+		@($(GCC) $(GCC_FLAGS) -I $(INCLUDE_INCLUDES) -c $< -o $@)
+		(echo "^[[0;93m"$< "->" $@"^[[0;0m")
+
+objects/%.o: $(SOURCES_PARSING_CHAMPIONS_PATH)%.c | objects
 		@($(GCC) $(GCC_FLAGS) -I $(INCLUDE_INCLUDES) -c $< -o $@)
 		(echo "^[[0;93m"$< "->" $@"^[[0;0m")
 

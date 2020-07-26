@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_integer.c                                    :+:      :+:    :+:   */
+/*   print_help.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/26 12:57:22 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/26 12:59:58 by emedea           ###   ########.fr       */
+/*   Created: 2020/07/26 16:51:19 by emedea            #+#    #+#             */
+/*   Updated: 2020/07/26 18:14:04 by emedea           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "types.h"
+#include "corewar.h"
 
-t_bool      ft_is_integer(const char *str)
+void        print_help()
 {
-    int     i;
+    printf("Используется так");
 
-    i = -1;
-    while (str[++i])
-    {
-        if (!(str[i] >= 48 && str[i] <= 57))
-            return (false);
-    }
-
-    return (true);
+    exit(0);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   corewar.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
+/*   By: rhulk <rhulk@student.21-school.ru>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 13:50:49 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/26 14:04:58 by emedea           ###   ########.fr       */
+/*   Updated: 2020/07/26 14:38:53 by rhulk            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@
 # include "types.h"
 # include "options.h"
 # include <stdio.h> // отключить потом
+# include <unistd.h>
+# include <fcntl.h>
 
 # include <stdlib.h>
 

@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   types.h                                            :+:      :+:    :+:   */
+/*   ft_is_cor.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/07/21 13:49:48 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/26 13:00:28 by emedea           ###   ########.fr       */
+/*   Created: 2020/07/26 13:23:22 by emedea            #+#    #+#             */
+/*   Updated: 2020/07/26 13:31:05 by emedea           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TYPES_H
-# define TYPES_H
+#include "corewar.h"
 
-typedef enum {
-    false,
-    true
-}       t_bool;
-
-// miscellaneous
-t_bool          ft_is_integer(const char *str);
-
-#endif
+t_bool      ft_is_cor_file(const char *filename)
+{
+    if (filename && ft_strlen(filename) > ft_strlen(COR_FILE_EXTENSION))
+        return (!ft_strcmp((ft_strchr(filename, '\0') - ft_strlen(COR_FILE_EXTENSION)), COR_FILE_EXTENSION));
+    else 
+        return (false);
+}

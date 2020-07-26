@@ -8,23 +8,30 @@ NAME = corewar
 
 GCC = gcc
 
-GCC_FLAGS = -Wall -Wextra -Werror
+GCC_FLAGS = 
 
 OBJ_PATH = objects/
 
 INCLUDE_INCLUDES = includes/
 
 SOURCES_PATH = sources/
-SOURCES_PARSING_PATH = sources/parsing/
+SOURCES_MISCELLANEOUS_PATH = sources/miscellaneous/
+SOURCES_MISCELLANEOUS_PARSING_PATH = sources/miscellaneous/parsing/
 SOURCES_FILES = \
 			main.c
+SOURCES_MISCELLANEOUS_FILES = \
+			ft_is_cor_file.c\
+			ft_is_integer.c
 SOURCES_PARSING_FILES = \
+			flags.c\
+			champion.c\
 			options.c
 
 OBJ_SOURCES_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_FILES:.c=.o))
-OBJ_SOURCES_PARSING_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_PARSING_FILES:.c=.o))
+OBJ_SOURCES_MISCELLANEOUS_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_MISCELLANEOUS_FILES:.c=.o))
+OBJ_SOURCES_MISCELLANEOUS_PARSING_CORE = $(addprefix $(OBJ_PATH), $(SOURCES_MISCELLANEOUS_PARSING_FILES:.c=.o))
 
-OBJECTS = $(OBJ_SOURCES_CORE) $(OBJ_SOURCES_PARSING_CORE) 
+OBJECTS = $(OBJ_SOURCES_CORE) $(OBJ_SOURCES_MISCELLANEOUS_CORE) $(OBJ_SOURCES_MISCELLANEOUS_PARSING_CORE) 
 
 all: $(NAME)
 
@@ -52,7 +59,11 @@ objects/%.o: $(SOURCES_PATH)%.c | objects
 		@($(GCC) $(GCC_FLAGS) -I $(INCLUDE_INCLUDES) -c $< -o $@)
 		(echo "^[[0;93m"$< "->" $@"^[[0;0m")
 
-objects/%.o: $(SOURCES_PARSING_PATH)%.c | objects
+objects/%.o: $(SOURCES_MISCELLANEOUS_PATH)%.c | objects
+		@($(GCC) $(GCC_FLAGS) -I $(INCLUDE_INCLUDES) -c $< -o $@)
+		(echo "^[[0;93m"$< "->" $@"^[[0;0m")
+
+objects/%.o: $(SOURCES_MISCELLANEOUS_PARSING_PATH)%.c | objects
 		@($(GCC) $(GCC_FLAGS) -I $(INCLUDE_INCLUDES) -c $< -o $@)
 		(echo "^[[0;93m"$< "->" $@"^[[0;0m")
 

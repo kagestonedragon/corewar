@@ -6,7 +6,7 @@
 /*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 13:50:49 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/26 19:29:46 by emedea           ###   ########.fr       */
+/*   Updated: 2020/07/29 19:55:17 by emedea           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,9 +95,6 @@ void                                    terminate(const int error_code, const ch
  * Options parsing
  */
 t_options                               *parse_options(int argc, char **argv);
-t_bool                      parse_champions(t_players **players, int *argc, char ***argv);
-t_players                   *parse_champion(const char *filename, int id);
-void                        add_player(t_players **players, t_players *new, int id);
 
 /**
  * Champion parsing
@@ -111,7 +108,6 @@ uint8_t                                 *read_champion_code(int fd, size_t len);
  * Debug functions
  */
 void                                    debug_champions(t_corewar *corewar);
-void                                    debug_options(t_corewar *corewar)
-
+void                                    debug_options(t_corewar *corewar);
 
 #endif

@@ -6,15 +6,14 @@
 /*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/26 18:03:57 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/26 18:12:09 by emedea           ###   ########.fr       */
+/*   Updated: 2020/07/29 20:08:20 by emedea           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
 /**
- * Function for reading small areas (4 bytes) of champion file such as Magic Header, NULL area
- * 
+ * Function for reading small areas (4 bytes) of champion file such as Magic Header, NULL area, Code size
  */
 int32_t             read_champion_bytecode(int fd)
 {

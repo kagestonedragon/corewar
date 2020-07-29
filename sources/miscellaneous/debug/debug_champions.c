@@ -6,13 +6,13 @@
 /*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/26 16:52:38 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/26 17:00:29 by emedea           ###   ########.fr       */
+/*   Updated: 2020/07/29 20:00:03 by emedea           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-void        debug_champions(t_corewar *corewar)
+/*void        debug_champions(t_corewar *corewar)
 {
     while (corewar->players)
     {
@@ -24,4 +24,4 @@ void        debug_champions(t_corewar *corewar)
 
         corewar->players = corewar->players->next;
     }
-}
+}*/

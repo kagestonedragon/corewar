@@ -6,7 +6,7 @@
 /*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 13:47:12 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/26 20:01:34 by emedea           ###   ########.fr       */
+/*   Updated: 2020/07/29 22:04:53 by emedea           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # include <stdint.h>
 
 typedef struct                      s_champions_raw{
-    uint8_t                         id;
+    int8_t                          id;
     char                            *filename;
     struct s_champions_raw          *next;
 }                                   t_champions_raw;

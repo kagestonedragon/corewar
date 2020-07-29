@@ -6,13 +6,13 @@
 /*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/26 12:52:35 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/26 20:08:05 by emedea           ###   ########.fr       */
+/*   Updated: 2020/07/29 20:00:28 by emedea           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "corewar.h"
 
-t_bool      parse_champions(t_players **players, int *argc, char ***argv)
+/*t_bool      parse_champions(t_players **players, int *argc, char ***argv)
 {
     int8_t  id;
 
@@ -30,4 +30,4 @@ t_bool      parse_champions(t_players **players, int *argc, char ***argv)
     }
 
     return (true); // убрать
-}
+}*/

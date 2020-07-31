@@ -1,0 +1,9 @@
+[submodule "dependencies/ft_printf"]
+	path = dependencies/ft_printf
+	url = git@github.com:kagestonedragon/ft_printf.git
+[submodule "dependencies/libft"]
+	path = dependencies/libft
+	url = git@github.com:kagestonedragon/libft.git
+[submodule "dependencies/auto_make_php"]
+	path = dependencies/auto_make_php
+	url = git@github.com:kagestonedragon/auto_make_php.git

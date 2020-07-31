@@ -6,7 +6,7 @@
 /*   By: emedea <emedea@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/21 13:50:49 by emedea            #+#    #+#             */
-/*   Updated: 2020/07/29 19:55:17 by emedea           ###   ########.fr       */
+/*   Updated: 2020/07/31 18:10:52 by emedea           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,6 +95,7 @@ void                                    terminate(const int error_code, const ch
  * Options parsing
  */
 t_options                               *parse_options(int argc, char **argv);
+t_champions                             *parse_champions_files(t_champions_raw *champions);
 
 /**
  * Champion parsing
